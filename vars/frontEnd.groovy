@@ -7,9 +7,14 @@ def call() {
         
         def mavenInstallation = tool 'maven-3.8.3'
         def mvnCmd = "${mavenInstallation}/bin/mvn"
-        
-        stage ('Pull Code') {
-            git 'https://github.com/cicd-angular-springboot/FrontEnd-Angular.git'
+
+        stage('Checkout') {
+            checkout([$class: 'GitSCM',
+                    branches: [[name: '*/master']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[url: 'https://github.com/cicd-angular-springboot/FrontEnd-Angular.git']]])
         }
         
         stage('Test Maven') {
@@ -20,9 +25,23 @@ def call() {
             sh 'npm version && ls -lah'
         }
 
-        // stage('Test & Build Image') {
-        //     sh "docker build -t ngochung1809/front-end-angular${env.BUILD_NUMBER} ."
-        // }
+        stage('Build') {
+            sh 'npm install'
+            sh 'npm run build'
+        }
+
+        stage('Test') {
+            // GitHub Pull Request Builder
+            def testResult = sh(returnStatus: true, script: 'npm test')
+            if (testResult != 0) {
+                currentBuild.result = 'FAILURE'
+                error("Kiểm tra thất bại: Dừng job")
+            }
+        }
+
+        stage('Test & Build Image') {
+            sh "docker build -t ngochung1809/front-end-angular${env.BUILD_NUMBER} ."
+        }
 
         stage('Deploy') {
             sh 'docker ps'
