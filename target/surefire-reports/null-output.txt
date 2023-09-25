@@ -1,1 +1,0 @@
-Running tests for org.jenkins-ci.plugins:cicd:999999-SNAPSHOT
