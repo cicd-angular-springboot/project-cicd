@@ -1,0 +1,74 @@
+Sep 25, 2023 12:31:17 PM org.jvnet.hudson.test.WarExploder explode
+INFO: Exploding /home/ngochung1809/.m2/repository/org/jenkins-ci/main/jenkins-war/2.361.4/jenkins-war-2.361.4.war into /home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/jenkins-for-test
+Sep 25, 2023 12:31:18 PM org.eclipse.jetty.server.handler.ContextHandler setContextPath
+WARNING: Empty contextPath
+Sep 25, 2023 12:31:18 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 17.0.6+10-Debian-1
+Sep 25, 2023 12:31:18 PM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+Sep 25, 2023 12:31:18 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: Session workerName=node0
+Sep 25, 2023 12:31:19 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.w.WebAppContext@5f172d4a{Jenkins v2.361.4,/,file:///home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/jenkins-for-test/,AVAILABLE}{/home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/jenkins-for-test}
+Sep 25, 2023 12:31:19 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@455824ad{HTTP/1.1, (http/1.1)}{localhost:44369}
+Sep 25, 2023 12:31:19 PM org.eclipse.jetty.server.Server doStart
+INFO: Started Server@71f96dfb{STARTING}[10.0.15,sto=0] @2428ms
+Sep 25, 2023 12:31:19 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/javax-mail-api.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/matrix-auth.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/sshd.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/windows-slaves.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/antisamy-markup-formatter.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/command-launcher.jpi
+Sep 25, 2023 12:31:19 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /tmp/jenkins16953523259312330446/plugins/jdk-tool.jpi
+Sep 25, 2023 12:31:20 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Sep 25, 2023 12:31:20 PM jenkins.bouncycastle.api.BouncyCastlePlugin start
+INFO: /home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/tmp/j h13028458439106177235/plugins/bouncycastle-api/WEB-INF/optional-lib not found; for non RealJenkinsRule this is fine and can be ignored.
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: System config loaded
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: System config adapted
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Configuration for all jobs updated
+Sep 25, 2023 12:31:21 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 17.0.6+10-Debian-1
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: Session workerName=node0
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.s.ServletContextHandler@56dd6efa{/,null,AVAILABLE}
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@d2e6b0b{HTTP/1.1, (http/1.1)}{0.0.0.0:43379}
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.Server doStart
+INFO: Started Server@228bda54{STARTING}[10.0.15,sto=0] @5482ms
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.Server doStop
+INFO: Stopped Server@71f96dfb{STOPPING}[10.0.15,sto=0]
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.AbstractConnector doStop
+INFO: Stopped ServerConnector@455824ad{HTTP/1.1, (http/1.1)}{localhost:0}
+Sep 25, 2023 12:31:22 PM org.eclipse.jetty.server.handler.ContextHandler doStop
+INFO: Stopped o.e.j.w.WebAppContext@5f172d4a{Jenkins v2.361.4,/,file:///home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/jenkins-for-test/,STOPPED}{/home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/jenkins-for-test}
+Sep 25, 2023 12:31:22 PM hudson.lifecycle.Lifecycle onStatusUpdate
+INFO: Stopping Jenkins
+Sep 25, 2023 12:31:22 PM hudson.lifecycle.Lifecycle onStatusUpdate
+INFO: Jenkins stopped
+Sep 25, 2023 12:31:22 PM org.jvnet.hudson.test.TemporaryDirectoryAllocator dispose
+INFO: deleting /home/ngochung1809/Downloads/jenkins-automation/project-cicd/target/tmp/j h13028458439106177235

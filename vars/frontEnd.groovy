@@ -1,23 +1,31 @@
 import devops.cicd.tools.Ssh
 
 def call() {
-    dockerNode(image: 'docker:latest') {
-        def ssh = new Ssh()
-        def serverDeployIP = "34.126.122.163"
-        def serverSonarqubeIP = "34.126.122.163"
-        def applicationDir = "/home/ubuntu/registry-service"
-        stage("Pull Code") {
-            ssh.executeCommand(serverDeployIP, executeDir(applicationDir, "git pull"), "ubuntu")
+    node {
+        def nodejsInstallation = tool name: 'nodejs', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        env.PATH = "${nodejsInstallation}/bin:${env.PATH}"
+        
+        def mavenInstallation = tool 'maven-3.8.3'
+        def mvnCmd = "${mavenInstallation}/bin/mvn"
+        
+        stage ('Pull Code') {
+            git 'https://github.com/cicd-angular-springboot/FrontEnd-Angular.git'
+        }
+        
+        stage('Test Maven') {
+            sh "${mvnCmd} -v"
         }
 
-        stage("Install Dependencies") {
-            ssh.executeCommand(serverDeployIP, executeDir(applicationDir, "mvn clean install"), "ubuntu")
+        stage('Install Packages') {
+            sh 'npm install && ls -lah'
         }
 
-        stage("SonarQube Analysis") {
-            withSonarQubeEnv('SONARQUBE_SERVER') {
-                ssh.executeCommand(serverSonarqubeIP, executeDir(applicationDir, "mvn sonar:sonar"), "ubuntu")
-            }
+        stage('Test & Build Image') {
+            sh "docker build -t ngochung1809/front-end-angular${env.BUILD_NUMBER} ."
+        }
+
+        stage('Deploy') {
+            sh 'docker ps'
         }
     }
 }

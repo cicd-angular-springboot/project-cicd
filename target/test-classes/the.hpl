@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Group-Id: org.jenkins-ci.plugins
+Artifact-Id: cicd
+Short-Name: cicd
+Long-Name: payment-project-cicd
+Plugin-Version: 999999-SNAPSHOT (private-0aae9dcd-ngochung1809)
+Hudson-Version: 2.361.4
+Jenkins-Version: 2.361.4
+Plugin-Dependencies: workflow-basic-steps:1017.vb_45b_302f0cea_,workflow
+ -cps:3659.v582dc37621d8,workflow-durable-task-step:1246.v5524618ea_097,
+ workflow-step-api:639.v6eca_cd8c04a_a_,cloudbees-folder:6.758.vfd75d09e
+ ea_a_1,docker-commons:419.v8e3cd84ef49c,pipeline-model-definition:2.213
+ 1.vb_9788088fdb_5
+Plugin-Developers: 
+Support-Dynamic-Loading: true
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/plugin-pom.gi
+ t/cicd
+Plugin-ScmTag: plugin-4.67
+Plugin-ScmUrl: https://github.com/jenkinsci/plugin-pom/cicd
+Plugin-GitHash: 0aae9dcd2d9d874b4ae3e857bb4a61c191648efc
+Implementation-Build: 0aae9dcd2d9d874b4ae3e857bb4a61c191648efc
+Libraries: /home/ngochung1809/Downloads/jenkins-automation/project-cicd/
+ target/classes,/home/ngochung1809/.m2/repository/com/github/ben-manes/c
+ affeine/caffeine/3.1.6/caffeine-3.1.6.jar,/home/ngochung1809/.m2/reposi
+ tory/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar,/home/n
+ gochung1809/.m2/repository/org/codehaus/groovy/groovy-json/3.0.8/groovy
+ -json-3.0.8.jar,/home/ngochung1809/.m2/repository/org/codehaus/groovy/g
+ roovy/3.0.8/groovy-3.0.8.jar,/home/ngochung1809/.m2/repository/org/jbos
+ s/marshalling/jboss-marshalling-river/2.1.0.Final/jboss-marshalling-riv
+ er-2.1.0.Final.jar,/home/ngochung1809/.m2/repository/org/jboss/marshall
+ ing/jboss-marshalling/2.1.0.Final/jboss-marshalling-2.1.0.Final.jar
+Resource-Path: /home/ngochung1809/Downloads/jenkins-automation/project-c
+ icd/src/main/webapp
+
