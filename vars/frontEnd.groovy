@@ -17,12 +17,12 @@ def call() {
         }
 
         stage('Install Packages') {
-            sh 'npm install && ls -lah'
+            sh 'npm version && ls -lah'
         }
 
-        stage('Test & Build Image') {
-            sh "docker build -t ngochung1809/front-end-angular${env.BUILD_NUMBER} ."
-        }
+        // stage('Test & Build Image') {
+        //     sh "docker build -t ngochung1809/front-end-angular${env.BUILD_NUMBER} ."
+        // }
 
         stage('Deploy') {
             sh 'docker ps'
